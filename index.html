@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Maya 🌻🌹</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle, #1b0033, #060010);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .garden {
+      text-align: center;
+      animation: glow 2s infinite alternate;
+    }
+
+    .flowers {
+      font-size: 90px;
+      text-shadow: 0 0 20px gold, 0 0 40px red, 0 0 60px pink;
+      animation: bloom 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes bloom {
+      from { transform: scale(0.9); }
+      to { transform: scale(1.15); }
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 10px pink); }
+      to { filter: drop-shadow(0 0 35px gold); }
+    }
+
+    .message {
+      margin-top: 25px;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #ffd6e8;
+      text-shadow: 0 0 15px #ff69b4;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(45deg, gold, hotpink);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 20px hotpink;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .heart {
+      position: absolute;
+      color: pink;
+      font-size: 20px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="garden">
+    <div class="flowers">🌻 🌹 🌻 🌹 🌻</div>
+
+    <div class="message">
+      ❤️❤️❤️❤️❤️Maya,<br>
+      Today feels like a restart to our relationship,<br>
+      on the same day our story first began.<br>
+      Like a sunflower finding the sun,<br>
+      and a rose blooming again,<br>
+      I choose you, again and again. <br>
+      Sorry this hasnt been the month we imagined but<br>
+      I'm always here for you. On your good days and <br>
+      more on the bad days also ❤️❤️❤️❤️❤️
+    </div>
+
+
+  <script>
+    function showLove() {
+      alert("I love you Maya ❤️\n\nLet's restart, on the day we started.");
+    }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 400);
+  </script>
+</body>
+</html>
+<a href="date.html">
+  <button>Go to the next surprise ❤️</button>
+</a>

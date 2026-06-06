@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy 26 Months Maya ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle, #ffd6e8, #ff8fab, #4b0033);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.18);
+      padding: 35px;
+      border-radius: 30px;
+      width: 85%;
+      max-width: 650px;
+      box-shadow: 0 0 35px #ff4d88;
+      backdrop-filter: blur(8px);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 25px #ff7aa2; }
+      to { box-shadow: 0 0 55px #fff0f5; }
+    }
+
+    .dog {
+      font-size: 95px;
+      animation: bounce 1.8s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    .bouquet {
+      font-size: 85px;
+      text-shadow: 0 0 20px red, 0 0 40px pink;
+      margin: 15px 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #fff6fa;
+      text-shadow: 0 0 15px #ff0066;
+    }
+
+    .letter {
+      font-size: 21px;
+      line-height: 1.7;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .question {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 25px;
+      color: #fff0f5;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #ff0066, #ffb3c6);
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 0 25px #ff4d88;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 45px white;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 25px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="dog">🐶💌</div>
+    <div class="bouquet">🌹🌹🌹🌹🌹🌹🌹</div>
+
+    <h1>Happy 26 Months, Maya ❤️</h1>
+
+    <div class="letter">
+        Meri Maya,<br><br>
+      Happy 26 months, my love.  
+      This is a very special month in our life,  
+      as we both fought and continued to be with each other.
+      I will do everything in my power to make you happy,
+      heard, and most importantly, understood.<br><br>
+
+      Like this huge bouquet of roses,  
+      my love for you keeps growing, glowing,  
+      and blooming every single day. 🌹❤️
+    </div>
+
+    <div class="question">
+      Will you go on a date with me? 🥹❤️
+    </div>
+
+    <button onclick="sayYes()">YES, I WILL ❤️</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      alert("YAYYY! ❤️\n\nI love you Maya.\nHappy 26 months, my love.\nOur date is officially confirmed 😘🌹");
+    }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 350);
+  </script>
+</body>
+</html>
