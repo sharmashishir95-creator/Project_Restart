@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Every Road Leads Back to You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #16001e, #4b0033, #ff4d88);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      margin: 40px auto;
+      padding: 35px;
+      width: 85%;
+      max-width: 700px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 0 40px pink;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 36px;
+      text-shadow: 0 0 20px hotpink;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 25px pink;
+    }
+
+    .letter {
+      font-size: 22px;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    .countdown {
+      margin-top: 25px;
+      font-size: 24px;
+      color: #ffe6f0;
+      text-shadow: 0 0 15px white;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #ff0066, #ffb3c6);
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 25px pink;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh); opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>Maya, every road leads back to you ❤️</h1>
+
+    <div class="photos">
+      <img src="me.jpeg" class="photo" alt="Me">
+      <img src="maya.jpg" class="photo" alt="Maya">
+    </div>
+
+    <div class="letter">
+      My love,<br><br>
+      This is not just a date invitation.  
+      This is my heart choosing you agian and agian.  
+      Happy 26 months, Maya.  
+      A very special month in our life.  
+      No matter where life takes us,  
+      every road always leads me back to you. ❤️
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+
+    <button onclick="alert('Our date is confirmed ❤️ I love you Maya.')">
+      Our Date Is Confirmed 💕
+    </button>
+  </div>
+
+  <script>
+    const startDate = new Date("2024-04-07"); // CHANGE THIS to your real start date
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const months = Math.floor(days / 30.44);
+
+      document.getElementById("countdown").innerHTML =
+        "We have been together for about " + (months + 1) + " months and " + days + " beautiful days ❤️";
+    }
+
+    updateCountdown();
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 350);
+  </script>
+</body>
+</html>
